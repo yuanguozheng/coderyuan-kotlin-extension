@@ -5,24 +5,36 @@ import android.graphics.Canvas
 import android.view.View
 import android.view.ViewGroup
 
+/**
+ * 设置/获取View的marginStart
+ */
 inline var View.marginStart: Int
     get() = (layoutParams as? ViewGroup.MarginLayoutParams)?.marginStart ?: 0
     set(value) {
         (layoutParams as? ViewGroup.MarginLayoutParams)?.marginStart = value
     }
 
+/**
+ * 设置/获取View的marginTop
+ */
 inline var View.marginTop: Int
     get() = (layoutParams as? ViewGroup.MarginLayoutParams)?.topMargin ?: 0
     set(value) {
         (layoutParams as? ViewGroup.MarginLayoutParams)?.topMargin = value
     }
 
+/**
+ * 设置/获取View的marginEnd
+ */
 inline var View.marginEnd: Int
     get() = (layoutParams as? ViewGroup.MarginLayoutParams)?.marginEnd ?: 0
     set(value) {
         (layoutParams as? ViewGroup.MarginLayoutParams)?.marginEnd = value
     }
 
+/**
+ * 设置/获取View的marginBottom
+ */
 inline var View.marginBottom: Int
     get() = (layoutParams as? ViewGroup.MarginLayoutParams)?.bottomMargin ?: 0
     set(value) {
