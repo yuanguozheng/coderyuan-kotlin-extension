@@ -42,6 +42,54 @@ inline var View.marginBottom: Int
     }
 
 /**
+ * 设置/获取View的paddingStart
+ */
+inline var View.startPadding: Int
+    get() = this.paddingStart
+    set(value) {
+        val top = this.paddingTop
+        val end = this.paddingEnd
+        val bottom = this.paddingBottom
+        this.setPadding(value, top, end, bottom)
+    }
+
+/**
+ * 设置/获取View的paddingTop
+ */
+inline var View.topPadding: Int
+    get() = this.paddingTop
+    set(value) {
+        val start = this.paddingStart
+        val end = this.paddingEnd
+        val bottom = this.paddingBottom
+        this.setPadding(start, value, end, bottom)
+    }
+
+/**
+ * 设置/获取View的paddingEnd
+ */
+inline var View.endPadding: Int
+    get() = this.paddingEnd
+    set(value) {
+        val start = this.paddingStart
+        val top = this.paddingTop
+        val bottom = this.paddingBottom
+        this.setPadding(start, top, value, bottom)
+    }
+
+/**
+ * 设置/获取View的paddingBottom
+ */
+inline var View.bottomPadding: Int
+    get() = this.paddingBottom
+    set(value) {
+        val start = this.paddingStart
+        val top = this.paddingTop
+        val end = this.paddingEnd
+        this.setPadding(start, top, end, value)
+    }
+
+/**
  * 从某个View截取Bitmap
  *
  * @param config Bitmap配置，RGB565、ARGB8888
